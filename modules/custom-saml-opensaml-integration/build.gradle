@@ -1,0 +1,7 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	
+	compileInclude group: 'org.opensaml', name: 'opensaml-xmlsec-api', version: '3.3.0'
+	compileInclude group: 'org.opensaml', name: 'opensaml-xmlsec-impl', version: '3.3.0'
+	compileOnly group: 'com.liferay', name: 'com.liferay.saml.opensaml.integration', version: '6.2.22'
+}

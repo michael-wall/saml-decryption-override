@@ -1,0 +1,12 @@
+Bundle-Name: custom-saml-opensaml-integration
+Bundle-SymbolicName: com.mw.custom.saml.opensaml.integration
+Bundle-Version: 1.0.0
+Import-Package:\
+    ! com.beust.jcommander.*,\
+    ! com.sun.msv.*,\
+    ! org.apache.*,\
+    ! org.bouncycastle.*,\
+    ! org.relaxng.*,\
+    ! org.slf4j.*,\
+	\
+	*

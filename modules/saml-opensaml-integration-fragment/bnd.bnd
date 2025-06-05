@@ -1,0 +1,7 @@
+Bundle-Name: saml-opensaml-integration-fragment
+Bundle-SymbolicName: com.mw.saml.opensaml.integration.fragment
+Bundle-Version: 1.0.0
+Fragment-Host: com.liferay.saml.opensaml.integration
+#Fragment-Host: com.liferay.saml.opensaml.integration;bundle-version="6.2.22"
+Export-Package: \
+ com.liferay.saml.opensaml.integration.internal.util

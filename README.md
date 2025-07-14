@@ -22,3 +22,9 @@
 ...[SecurityConfigurationBootstrap:108] http://www.w3.org/2001/04/xmlenc#rsa-1_5
 ...[SecurityConfigurationBootstrap:113] EncryptionConfiguration Blacklisted After: 0
 ```
+
+**Change Log**
+- v2.0 14th June 2025, Fixed package dependency issue that was causing the following exception during SAML Login before the user was redirected to the SAML IdP:
+```
+2025-07-10 12:48:30.801 INFO  [http-nio-8098-exec-4][SpSsoSamlPortalFilter:109] Failed to send Authn request: java.lang.ClassCastException: class org.opensaml.xmlsec.impl.BasicEncryptionConfiguration cannot be cast to class org.opensaml.xmlsec.EncryptionConfiguration (org.opensaml.xmlsec.impl.BasicEncryptionConfiguration is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @585c3fe; org.opensaml.xmlsec.EncryptionConfiguration is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @4961dbf2)
+```

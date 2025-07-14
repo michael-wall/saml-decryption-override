@@ -7,7 +7,7 @@
 
 **Deployment Steps**
 1. Blacklist the OSGi Component com.liferay.saml.opensaml.integration.internal.bootstrap.SecurityConfigurationBootstrap using these steps: https://learn.liferay.com/w/dxp/system-administration/installing-and-managing-apps/managing-apps/blacklisting-osgi-components
-2. Build and deploy the following custom modules:
+2. Do a Gradle Clean then a Gradle build and deploy the following custom modules:
 - custom-saml-opensaml-integration
 - saml-opensaml-integration-fragment
 3. Confirm that the OSGi modules deploy without any errors.
@@ -28,3 +28,4 @@
 ```
 2025-07-10 12:48:30.801 INFO  [http-nio-8098-exec-4][SpSsoSamlPortalFilter:109] Failed to send Authn request: java.lang.ClassCastException: class org.opensaml.xmlsec.impl.BasicEncryptionConfiguration cannot be cast to class org.opensaml.xmlsec.EncryptionConfiguration (org.opensaml.xmlsec.impl.BasicEncryptionConfiguration is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @585c3fe; org.opensaml.xmlsec.EncryptionConfiguration is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @4961dbf2)
 ```
+- Ensure a gradle clean is triggered before a gradle build, to ensure the modules are built correctly based on the latest build.gradle and bnd.bnd.
